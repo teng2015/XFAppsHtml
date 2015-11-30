@@ -1,0 +1,140 @@
+﻿body {
+    overflow-x: hidden;
+    background-color: #000;
+    font-family: SimHei;
+}
+
+.header {
+    height: 40px;
+    background-color: #2D2C2D;
+    color: #fff;
+    line-height: 40px;
+    width: 100%;
+}
+
+    .header span {
+        display: inline-block;
+    }
+
+.banner {
+    margin-bottom: 6px;
+}
+
+    .banner img {
+        width: 100%;
+    }
+
+.body-1 {
+    height: 170px;
+    margin-bottom: 6px;
+}
+
+    .body-1 > a {
+        position: relative;
+        height: 100%;
+        width: 32%;
+        display: inline-block;
+        float: left;
+    }
+
+        .body-1 > a > span {
+            position: absolute;
+            bottom: 0;
+            text-align: center;
+            width: 100%;
+            color: #fff;
+            background-color: #000;
+            padding: 5px 0;
+            filter: alpha(opacity=80);
+            -moz-opacity: 0.8;
+            -khtml-opacity: 0.8;
+            opacity: 0.8;
+        }
+
+.body-2 {
+    height: 170px;
+    margin-bottom: 6px;
+}
+
+    .body-2 > div {
+        position: relative;
+        height: 100%;
+        display: inline-block;
+        float: left;
+    }
+
+.body-3 {
+    height: 170px;
+    margin-bottom: 6px;
+}
+
+    .body-3 div {
+        position: relative;
+    }
+
+        .body-3 div > span {
+            position: absolute;
+            bottom: 25%;
+            left: 25%;
+            padding: 2px 12px;
+            color: #F38F44;
+            border: 1px solid #F38F44;
+            border-radius: 4px;
+        }
+
+    .body-3 > div {
+        height: 100%;
+        width: 49%;
+        display: inline-block;
+        float: left;
+    }
+
+        .body-3 > div > div {
+            height: 48%;
+        }
+
+.body-4 {
+    width: 98%;
+    margin: 0 auto;
+    background-color: #fff;
+    border-radius: 3px;
+    padding: 5px;
+    margin-bottom: 6px;
+}
+
+    .body-4 .title {
+        color: #F38F44;
+        margin-bottom: 6px;
+        font-size: 1.3em;
+    }
+
+    .body-4 > ul {
+        padding: 0px;
+    }
+
+    .body-4 > ul > li > a {
+        display: block;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        height: 28px;
+        width: 100%;
+        text-decoration: none !important;
+        border-bottom: 2px solid #DBD7D2;
+        margin-bottom: 5px;
+        padding-left: 5px;
+    }
+
+.footer {
+    height: 40px;
+}
+
+    .footer > a {
+        width: 50%;
+        height: 100%;
+        display: block;
+        float: left;
+        text-align: center;
+        line-height: 40px;
+        color: #fff;
+    }
