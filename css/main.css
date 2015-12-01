@@ -2,6 +2,12 @@
     overflow-x: hidden;
     background-color: #000;
     font-family: SimHei;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
 }
 
 .header {
@@ -104,29 +110,119 @@
 
     .body-4 .title {
         color: #F38F44;
-        margin-bottom: 6px;
         font-size: 1.3em;
+        padding: 10px 0 0 5px;
     }
 
     .body-4 > ul {
         padding: 0px;
     }
 
-    .body-4 > ul > li > a {
-        display: block;
-        overflow: hidden;
-        white-space: nowrap;
-        text-overflow: ellipsis;
-        height: 28px;
-        width: 100%;
-        text-decoration: none !important;
-        border-bottom: 2px solid #DBD7D2;
-        margin-bottom: 5px;
-        padding-left: 5px;
+        .body-4 > ul > li > a {
+            display: block;
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            height: 28px;
+            width: 100%;
+            text-decoration: none !important;
+            border-bottom: 2px solid #DBD7D2;
+            margin-bottom: 5px;
+            padding: 0 5px;
+            color: #78716F;
+        }
+
+        .body-4 > ul > li > a > span {
+            padding-right: 10px;
+            font-weight: bold;
+            color: #F38F44;
+        }
+
+.body-5 > input {
+    display: block;
+    background: #F67F2D;
+    margin: 0 auto;
+    width: 80%;
+    margin-top: 10px;
+    height: 40px;
+    border: 2px solid #F9C099;
+    color: #fff;
+    padding: 0 15px;
+    border-radius: 2px;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+    .body-5 > input::-webkit-input-placeholder {
+        color: #fff;
     }
 
-.footer {
+    .body-5 > input:-moz-placeholder {
+        color: #fff;
+    }
+
+    .body-5 > input::-moz-placeholder {
+        color: #fff;
+    }
+
+    .body-5 > input:-ms-input-placeholder {
+        color: #fff;
+    }
+
+.body-5 > button {
+    display: block;
+    margin: 0 auto;
+    width: 60%;
+    margin-top: 20px;
     height: 40px;
+    border-radius: 10px;
+    padding: 6px 0;
+    text-align: center;
+    border: none;
+    background: #fff;
+    font-family: inherit;
+    color: #C3362A;
+    font-size: 17px;
+}
+
+.body-5 .title {
+    color: #FDEEE7;
+    padding: 20px 0 0 10px;
+}
+
+.body-5 .title > div {
+    padding: 10px 0 10px 0;
+}
+
+.body-6 .block {
+    width: 90%;
+    margin: 0 auto 5px auto;
+    padding: 5px;
+    border: 1px solid #E2E2E2;
+    border-radius: 3px;
+    margin-bottom: 8px;
+}
+
+.body-6 .block img {
+    width: 100%;
+}
+
+.body-6 .title {
+    padding: 5px 0;
+    font-size: 14px;
+    color: #FB9758;
+}
+
+.body-6 .floatright {
+    padding-right: 10%;
+    font-weight: bold;
+}
+
+.footer {
+    position: fixed;
+    bottom: 0;
+    height: 40px;
+    width: 100%;
 }
 
     .footer > a {
@@ -138,3 +234,54 @@
         line-height: 40px;
         color: #fff;
     }
+
+.footer2 {
+    height: 40px;
+}
+
+@font-face {
+    font-family: 'Glyphicons Halflings';
+    src: url('../fonts/glyphicons-halflings-regular.eot');
+    src: url('../fonts/glyphicons-halflings-regular.eot?#iefix') format('embedded-opentype'), url('../fonts/glyphicons-halflings-regular.woff2') format('woff2'), url('../fonts/glyphicons-halflings-regular.woff') format('woff'), url('../fonts/glyphicons-halflings-regular.ttf') format('truetype'), url('../fonts/glyphicons-halflings-regular.svg#glyphicons_halflingsregular') format('svg');
+}
+
+.glyphicon {
+    position: relative;
+    top: 1px;
+    display: inline-block;
+    font-family: 'Glyphicons Halflings';
+    font-style: normal;
+    font-weight: normal;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.glyphicon-comment:before {
+    content: "\e111";
+}
+
+.glyphicon-map-marker:before {
+    content: "\e062";
+}
+
+.glyphicon-menu-hamburger:before {
+    content: "\e236";
+}
+
+button, input {
+    outline: none;
+}
+
+li {
+    list-style: none;
+}
+
+.floatright {
+    float: right;
+}
+
+.floatleft {
+    float: left;
+}
+

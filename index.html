@@ -5,8 +5,20 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <title>主页</title>
-    <link href="css/bootstrap.min.css" rel="stylesheet" />
     <link href="css/main.css" rel="stylesheet" />
+    <link rel="stylesheet" href="css/jflex.min.css" type="text/css" media="all">
+    <style>
+        .slides--titles li {
+            width: 10px;
+            height: 10px;
+            border-radius: 10px;
+        }
+
+            .slides--titles li .title--l {
+                height: 100%;
+                border-radius: 10px;
+            }
+    </style>
 </head>
 <body>
     <div class="header">
@@ -16,19 +28,33 @@
         <span class="glyphicon glyphicon-menu-hamburger" style="width: 10%; font-size: 15px;"></span>
     </div>
     <div class="banner">
-        <img src="img/2.jpg" />
+        <div class="flex">
+            <ul class="slides">
+                <li data-title="Slide 1">
+                    <img src="img/2.jpg" />
+                </li>
+                <li data-title="Slide 2">
+                    <img src="img/2.jpg" />
+                </li>
+                <li data-title="Slide 3">
+                    <img src="img/2.jpg" />
+                </li>
+                <li data-title="Slide 4">
+                    <img src="img/2.jpg" />
+                </li>
+            </ul>
+        </div>
     </div>
     <div class="body-1">
         <a href="#" style="background: url(img/1.png);">
             <span>星甫幼儿园</span>
         </a>
         <a style="width: 2%;"></a>
-        <a href="#" style="background: url(img/1.png);">
+        <a href="teachers.html" style="background: url(img/1.png);">
             <span>名教风采</span>
         </a>
         <a style="width: 2%;"></a>
-        <a href="#" style="background: url(img/1.png);">
-        </a>
+        <a href="#" style="background: url(img/1.png);"></a>
     </div>
     <div class="body-2">
         <div style="background: url(img/1.png); width: 66%;">
@@ -37,6 +63,7 @@
         <div style="background: url(img/1.png); width: 32%;">
         </div>
     </div>
+    <div class="footer2"></div>
     <div class="footer">
         <a href="#" style="background-color: #FFAD01;">
             <span class="glyphicon glyphicon-comment"></span>
@@ -47,5 +74,13 @@
             <span>联系地址</span>
         </a>
     </div>
+    <script src="js/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="js/jflex.js"></script>
+    <script type="text/javascript">
+        $('.flex').jFlex({
+            autoplay: true,
+            titles: 'bottom'
+        });
+    </script>
 </body>
 </html>
