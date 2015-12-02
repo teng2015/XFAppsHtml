@@ -10,6 +10,20 @@ a {
     text-decoration: none;
 }
 
+button, input {
+    outline: none;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    list-style: none;
+}
+
+/*页头*/
 .header {
     height: 40px;
     background-color: #2D2C2D;
@@ -18,24 +32,80 @@ a {
     width: 100%;
 }
 
-    .header span {
+    .header > span {
         display: inline-block;
     }
 
+    .header .menu {
+        position: relative;
+        top: 0px;
+        z-index: 1000;
+        width: 100%;
+        background-color: #000;
+        filter: alpha(opacity=80);
+        -moz-opacity: 0.8;
+        -khtml-opacity: 0.8;
+        opacity: 0.8;
+        display: none;
+    }
+
+    .header .menu > li > a {
+        padding: 0 20px;
+        display: block;
+        color: #fff;
+        border-bottom: 2px solid #777;
+        text-align: center;
+    }
+
+/*轮播图版块*/
 .banner {
     margin-bottom: 6px;
 }
 
-    .banner img {
+    .banner .slides--titles {
+        position: absolute;
+        margin-right: 10%;
+        bottom: 13px;
+        right: 0px;
+    }
+
+        .banner .slides--titles li {
+            width: 10px;
+            height: 10px;
+            border-radius: 10px;
+            margin-right: 3px;
+        }
+
+            .banner .slides--titles li .title--l {
+                height: 100%;
+                border-radius: 10px;
+            }
+
+    .banner .slides .title {
+        display: block;
+        padding: 9px;
+        color: #fff;
+        position: absolute;
+        bottom: 0px;
+        width: 100%;
+        background-color: #000;
+        filter: alpha(opacity=80);
+        -moz-opacity: 0.8;
+        -khtml-opacity: 0.8;
+        opacity: 0.8;
+    }
+
+    .banner .slides img {
         width: 100%;
     }
 
+/* 主页版块1 */
 .body-1 {
     height: 170px;
     margin-bottom: 6px;
 }
 
-    .body-1 > a {
+    .body-1 .block {
         position: relative;
         height: 100%;
         width: 32%;
@@ -43,7 +113,7 @@ a {
         float: left;
     }
 
-        .body-1 > a > span {
+        .body-1 .block > span {
             position: absolute;
             bottom: 0;
             text-align: center;
@@ -57,18 +127,28 @@ a {
             opacity: 0.8;
         }
 
+    .body-1 .block-2 {
+        position: relative;
+        height: 100%;
+        width: 2%;
+        display: inline-block;
+        float: left;
+    }
+
+/* 主页版块2 */
 .body-2 {
     height: 170px;
     margin-bottom: 6px;
 }
 
-    .body-2 > div {
+    .body-2 .block {
         position: relative;
         height: 100%;
         display: inline-block;
         float: left;
     }
 
+/*教练风采版块*/
 .body-3 {
     height: 170px;
     margin-bottom: 6px;
@@ -78,7 +158,14 @@ a {
         position: relative;
     }
 
-        .body-3 div > span {
+    .body-3 .block {
+        height: 100%;
+        width: 49%;
+        display: inline-block;
+        float: left;
+    }
+
+        .body-3 .block span {
             position: absolute;
             bottom: 25%;
             left: 25%;
@@ -88,57 +175,51 @@ a {
             border-radius: 4px;
         }
 
-    .body-3 > div {
-        height: 100%;
-        width: 49%;
-        display: inline-block;
-        float: left;
-    }
-
-        .body-3 > div > div {
+        .body-3 .block > div {
             height: 48%;
         }
 
+/*新闻版块*/
 .body-4 {
-    width: 98%;
+    width: 94%;
     margin: 0 auto;
     background-color: #fff;
     border-radius: 3px;
     padding: 5px;
     margin-bottom: 6px;
+    border: 1px solid #bbb;
 }
 
     .body-4 .title {
         color: #F38F44;
         font-size: 1.3em;
-        padding: 10px 0 0 5px;
+        padding: 10px;
     }
 
-    .body-4 > ul {
+    .body-4 .list {
         padding: 0px;
     }
 
-        .body-4 > ul > li > a {
+        .body-4 .list li > a {
             display: block;
             overflow: hidden;
             white-space: nowrap;
             text-overflow: ellipsis;
             height: 28px;
-            width: 100%;
-            text-decoration: none !important;
             border-bottom: 2px solid #DBD7D2;
             margin-bottom: 5px;
             padding: 0 5px;
             color: #78716F;
         }
 
-        .body-4 > ul > li > a > span {
-            padding-right: 10px;
-            font-weight: bold;
-            color: #F38F44;
-        }
+            .body-4 .list li > a > span {
+                padding-right: 10px;
+                font-weight: bold;
+                color: #F38F44;
+            }
 
-.body-5 > input {
+/*在线报名版块*/
+.body-5 input {
     display: block;
     background: #F67F2D;
     margin: 0 auto;
@@ -153,30 +234,29 @@ a {
     font-weight: bold;
 }
 
-    .body-5 > input::-webkit-input-placeholder {
+    .body-5 input::-webkit-input-placeholder {
         color: #fff;
     }
 
-    .body-5 > input:-moz-placeholder {
+    .body-5 input:-moz-placeholder {
         color: #fff;
     }
 
-    .body-5 > input::-moz-placeholder {
+    .body-5 input::-moz-placeholder {
         color: #fff;
     }
 
-    .body-5 > input:-ms-input-placeholder {
+    .body-5 input:-ms-input-placeholder {
         color: #fff;
     }
 
-.body-5 > button {
+.body-5 .btn {
     display: block;
-    margin: 0 auto;
     width: 60%;
-    margin-top: 20px;
     height: 40px;
     border-radius: 10px;
     padding: 6px 0;
+    margin: 20px auto;
     text-align: center;
     border: none;
     background: #fff;
@@ -190,10 +270,11 @@ a {
     padding: 20px 0 0 10px;
 }
 
-.body-5 .title > div {
-    padding: 10px 0 10px 0;
-}
+    .body-5 .title > div {
+        padding: 10px 0 10px 0;
+    }
 
+/*兴甫风采版块*/
 .body-6 .block {
     width: 90%;
     margin: 0 auto 5px auto;
@@ -203,9 +284,9 @@ a {
     margin-bottom: 8px;
 }
 
-.body-6 .block img {
-    width: 100%;
-}
+    .body-6 .block img {
+        width: 100%;
+    }
 
 .body-6 .title {
     padding: 5px 0;
@@ -218,6 +299,7 @@ a {
     font-weight: bold;
 }
 
+/*页脚版块*/
 .footer {
     position: fixed;
     bottom: 0;
@@ -237,6 +319,14 @@ a {
 
 .footer2 {
     height: 40px;
+}
+
+.floatright {
+    float: right;
+}
+
+.floatleft {
+    float: left;
 }
 
 @font-face {
@@ -269,19 +359,153 @@ a {
     content: "\e236";
 }
 
-button, input {
-    outline: none;
+.jFlex {
+    overflow: hidden;
+    position: relative;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
 
-li {
+.slides {
     list-style: none;
+    margin: 0;
+    padding: 0;
+    position: relative;
 }
 
-.floatright {
-    float: right;
+.slides--anim {
+    -moz-transition: transform ease-out .3s;
+    -ms-transition: transform ease-out .3s;
+    -o-transition: transform ease-out .3s;
+    -webkit-transition: transform ease-out .3s;
+    transition: transform ease-out .3s;
 }
 
-.floatleft {
+.slides--titles {
+    margin: 0;
+    padding: 0;
+}
+
+    .slides:before,
+    .slides--titles:before,
+    .slides:after,
+    .slides--titles:after {
+        content: ' ';
+        display: table;
+    }
+
+    .slides:after,
+    .slides--titles:after {
+        clear: both;
+    }
+
+.slides li {
+    display: block;
     float: left;
+    overflow: hidden;
+    position: relative;
 }
 
+.slides img {
+    display: block;
+    height: auto;
+    max-width: 100%;
+}
+
+.slides--titles li {
+    background: #eee;
+    cursor: pointer;
+    float: left;
+    overflow: hidden;
+    position: relative;
+    text-align: center;
+    -moz-transition: background linear .3s;
+    -ms-transition: background linear .3s;
+    -o-transition: background linear .3s;
+    -webkit-transition: background linear .3s;
+    transition: background linear .3s;
+    width: 33.33333%;
+}
+
+.jflex--2 li {
+    width: 50%;
+}
+
+.jflex--3 li {
+    width: 33.3333333%;
+}
+
+.jflex--4 li {
+    width: 25%;
+}
+
+.jflex--5 li {
+    width: 20%;
+}
+
+.jflex--6 li {
+    width: 16.6666667%;
+}
+
+.slides--titles li .title--l {
+    background: #555;
+    display: block;
+    height: 4px;
+    left: -100%;
+    position: relative;
+}
+
+.slides--titles li .title--t {
+    color: #333;
+    display: block;
+    height: 50px;
+    line-height: 50px;
+    padding: 0 10px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.slides--titles li.title--manual .title--l {
+    -moz-transition: all linear .3s;
+    -ms-transition: all linear .3s;
+    -o-transition: all linear .3s;
+    -webkit-transition: all linear .3s;
+    transition: all linear .3s;
+}
+
+.slides--titles li.title--auto .title--l {
+    -moz-transition: all linear .3s;
+    -ms-transition: all linear .3s;
+    -o-transition: all linear .3s;
+    -webkit-transition: all linear .3s;
+    transition: all linear .3s;
+}
+
+.slides--titles li.title--auto.title--active .title--l {
+    -moz-transition: all linear 5s;
+    -ms-transition: all linear 5s;
+    -o-transition: all linear 5s;
+    -webkit-transition: all linear 5s;
+    transition: all linear 5s;
+}
+
+.slides--titles li.title--active .title--l {
+    left: 0;
+}
+
+.slides--titles li.title--right .title--l {
+    left: 100%;
+}
+
+.slides--titles li.title--active .title--t {
+    font-weight: bold;
+}
+
+.slides--titles li.title--active {
+    background: #ddd;
+}

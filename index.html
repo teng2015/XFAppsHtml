@@ -6,62 +6,53 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <title>主页</title>
     <link href="css/main.css" rel="stylesheet" />
-    <link rel="stylesheet" href="css/jflex.min.css" type="text/css" media="all">
-    <style>
-        .slides--titles li {
-            width: 10px;
-            height: 10px;
-            border-radius: 10px;
-        }
-
-            .slides--titles li .title--l {
-                height: 100%;
-                border-radius: 10px;
-            }
-    </style>
 </head>
 <body>
     <div class="header">
-        <span style="width: 7%;"></span>
-        <span style="width: 10%;">X</span>
+        <span style="width: 17%;"></span>
         <span style="width: 60%;">欢迎访问贵阳兴甫武校</span>
         <span class="glyphicon glyphicon-menu-hamburger" style="width: 10%; font-size: 15px;"></span>
+        <ul class="menu">
+            <li><a href="index.html">主页</a></li>
+            <li><a href="news.html">新闻资讯</a></li>
+            <li><a href="teachers.html">教练风采</a></li>
+            <li><a href="xingfufengcai.html">兴甫风采</a></li>
+            <li><a href="onlineregistration.html">在线报名</a></li>
+        </ul>
     </div>
     <div class="banner">
         <div class="flex">
             <ul class="slides">
-                <li data-title="Slide 1">
+                <li>
                     <img src="img/2.jpg" />
+                    <span class="title">游亚洲第一的新加坡动物园</span>
                 </li>
-                <li data-title="Slide 2">
+                <li>
                     <img src="img/2.jpg" />
+                    <span class="title">游亚洲第一的新加坡动物园</span>
                 </li>
-                <li data-title="Slide 3">
+                <li>
                     <img src="img/2.jpg" />
+                    <span class="title">游亚洲第一的新加坡动物园</span>
                 </li>
-                <li data-title="Slide 4">
+                <li>
                     <img src="img/2.jpg" />
+                    <span class="title">游亚洲第一的新加坡动物园</span>
                 </li>
             </ul>
         </div>
     </div>
     <div class="body-1">
-        <a href="#" style="background: url(img/1.png);">
-            <span>星甫幼儿园</span>
-        </a>
-        <a style="width: 2%;"></a>
-        <a href="teachers.html" style="background: url(img/1.png);">
-            <span>名教风采</span>
-        </a>
-        <a style="width: 2%;"></a>
-        <a href="#" style="background: url(img/1.png);"></a>
+        <a class="block" href="#" style="background: url(img/1.png);"><span>星甫幼儿园</span></a>
+        <a class="block-2"></a>
+        <a class="block" href="#" style="background: url(img/1.png);"><span>名教风采</span></a>
+        <a class="block-2"></a>
+        <a class="block" href="#" style="background: url(img/1.png);"></a>
     </div>
     <div class="body-2">
-        <div style="background: url(img/1.png); width: 66%;">
-        </div>
-        <div style="width: 2%;"></div>
-        <div style="background: url(img/1.png); width: 32%;">
-        </div>
+        <a class="block" href="#" style="background: url(img/1.png); width: 66%;"></a>
+        <a class="block" href="#" style="width: 2%;"></a>
+        <a class="block" href="#" style="background: url(img/1.png); width: 32%;"></a>
     </div>
     <div class="footer2"></div>
     <div class="footer">
@@ -75,11 +66,17 @@
         </a>
     </div>
     <script src="js/jquery-2.1.1.min.js"></script>
-    <script type="text/javascript" src="js/jflex.js"></script>
+    <script type="text/javascript" src="js/jflex.min.js"></script>
     <script type="text/javascript">
-        $('.flex').jFlex({
-            autoplay: true,
-            titles: 'bottom'
+        $(document).ready(function () {
+            //轮播图初始化
+            $('.flex').jFlex({
+                titles: 'bottom'
+            });
+            //菜单初始化
+            $('.glyphicon-menu-hamburger').click(function () {
+                $('.header').find('.menu').slideToggle();
+            });
         });
     </script>
 </body>

@@ -7,22 +7,47 @@
     <title>新闻资讯</title>
     <link href="css/main.css" rel="stylesheet" />
 </head>
-<body>
+<body style="background: #fff;">
     <div class="header">
-        <span style="width: 7%;"></span>
-        <span style="width: 10%;">X</span>
+        <span style="width: 17%;"></span>
         <span style="width: 60%;">欢迎访问贵阳兴甫武校</span>
         <span class="glyphicon glyphicon-menu-hamburger" style="width: 10%; font-size: 15px;"></span>
+        <ul class="menu">
+            <li><a href="index.html">主页</a></li>
+            <li><a href="news.html">新闻资讯</a></li>
+            <li><a href="teachers.html">教练风采</a></li>
+            <li><a href="xingfufengcai.html">兴甫风采</a></li>
+            <li><a href="onlineregistration.html">在线报名</a></li>
+        </ul>
     </div>
     <div class="banner">
-        <img src="img/2.jpg" />
+        <div class="flex">
+            <ul class="slides">
+                <li>
+                    <img src="img/2.jpg" />
+                    <span class="title">游亚洲第一的新加坡动物园</span>
+                </li>
+                <li>
+                    <img src="img/2.jpg" />
+                    <span class="title">游亚洲第一的新加坡动物园</span>
+                </li>
+                <li>
+                    <img src="img/2.jpg" />
+                    <span class="title">游亚洲第一的新加坡动物园</span>
+                </li>
+                <li>
+                    <img src="img/2.jpg" />
+                    <span class="title">游亚洲第一的新加坡动物园</span>
+                </li>
+            </ul>
+        </div>
     </div>
     <div class="body-4">
         <div class="title">
             新闻资讯
             <span>News ></span>
         </div>
-        <ul>
+        <ul class="list">
             <li><a href="#"><span>></span>武术，中国武术、中国传统武术，通过武化流传，以“制止侵袭”为技术导向、引领修习者进入认识人与自然、社会客观规律的传统教化（武化）方式，是人类物质文明的导向和保障。</a></li>
             <li><a href="#"><span>></span>武术，中国武术、中国传统武术，通过武化流传，以“制止侵袭”为技术导向、引领修习者进入认识人与自然、社会客观规律的传统教化（武化）方式，是人类物质文明的导向和保障。</a></li>
             <li><a href="#"><span>></span>武术，中国武术、中国传统武术，通过武化流传，以“制止侵袭”为技术导向、引领修习者进入认识人与自然、社会客观规律的传统教化（武化）方式，是人类物质文明的导向和保障。</a></li>
@@ -44,5 +69,19 @@
             <span>联系地址</span>
         </a>
     </div>
+    <script src="js/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="js/jflex.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            //轮播图初始化
+            $('.flex').jFlex({
+                titles: 'bottom'
+            });
+            //菜单初始化
+            $('.glyphicon-menu-hamburger').click(function () {
+                $('.header').find('.menu').slideToggle();
+            });
+        });
+    </script>
 </body>
 </html>
