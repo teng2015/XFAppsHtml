@@ -24,18 +24,34 @@ li {
     list-style: none;
 }
 
-/*页头*/
+
+
 .header {
-    height: 40px;
-    background-color: #2D2C2D;
-    color: #fff;
-    line-height: 40px;
-    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
 }
 
-    .header > span {
-        display: inline-block;
+/*页头*/
+.header, .header2 {
+    height: 50px;
+    background-color: #2D2C2D;
+    color: #fff;
+    line-height: 50px;
+    width: 100%;
+    font-size: 20px;
+}
+
+    .header .title {
+        display: block;
+        text-align: center;
     }
+
+        .header .title > span {
+            font-size: 15px;
+            padding: 12px;
+            height: 100%;
+        }
 
     .header .menu {
         position: relative;
@@ -57,6 +73,8 @@ li {
         border-bottom: 2px solid #777;
         text-align: center;
     }
+
+
 
 /*轮播图版块*/
 .banner {
@@ -100,13 +118,15 @@ li {
         width: 100%;
     }
 
+
+
 /* 主页版块1 */
-.body-1 {
+.main {
     height: 170px;
     margin-bottom: 6px;
 }
 
-    .body-1 .block {
+    .main .block {
         position: relative;
         height: 100%;
         width: 32%;
@@ -114,7 +134,7 @@ li {
         float: left;
     }
 
-        .body-1 .block > span {
+        .main .block > span {
             position: absolute;
             bottom: 0;
             text-align: center;
@@ -128,7 +148,7 @@ li {
             opacity: 0.8;
         }
 
-    .body-1 .block-2 {
+    .main .block-2 {
         position: relative;
         height: 100%;
         width: 2%;
@@ -137,36 +157,38 @@ li {
     }
 
 /* 主页版块2 */
-.body-2 {
+.main-2 {
     height: 170px;
     margin-bottom: 6px;
 }
 
-    .body-2 .block {
+    .main-2 .block {
         position: relative;
         height: 100%;
         display: inline-block;
         float: left;
     }
 
+
+
 /*教练风采版块*/
-.body-3 {
+.teachers {
     height: 170px;
     margin-bottom: 6px;
 }
 
-    .body-3 div {
+    .teachers div {
         position: relative;
     }
 
-    .body-3 .block {
+    .teachers .block {
         height: 100%;
         width: 49%;
         display: inline-block;
         float: left;
     }
 
-        .body-3 .block span {
+        .teachers .block span {
             position: absolute;
             bottom: 25%;
             left: 25%;
@@ -176,12 +198,12 @@ li {
             border-radius: 4px;
         }
 
-        .body-3 .block > div {
+        .teachers .block > div {
             height: 48%;
         }
 
 /*新闻版块*/
-.body-4 {
+.news {
     width: 94%;
     margin: 0 auto;
     background-color: #fff;
@@ -191,17 +213,17 @@ li {
     border: 1px solid #bbb;
 }
 
-    .body-4 .title {
+    .news .title {
         color: #F38F44;
         font-size: 1.3em;
         padding: 10px;
     }
 
-    .body-4 .list {
+    .news .list {
         padding: 0px;
     }
 
-        .body-4 .list li > a {
+        .news .list li > a {
             display: block;
             overflow: hidden;
             white-space: nowrap;
@@ -213,14 +235,14 @@ li {
             color: #78716F;
         }
 
-            .body-4 .list li > a > span {
+            .news .list li > a > span {
                 padding-right: 10px;
                 font-weight: bold;
                 color: #F38F44;
             }
 
 /*在线报名版块*/
-.body-5 input {
+.regist input {
     display: block;
     background: #F67F2D;
     margin: 0 auto;
@@ -235,23 +257,23 @@ li {
     font-weight: bold;
 }
 
-    .body-5 input::-webkit-input-placeholder {
+    .regist input::-webkit-input-placeholder {
         color: #fff;
     }
 
-    .body-5 input:-moz-placeholder {
+    .regist input:-moz-placeholder {
         color: #fff;
     }
 
-    .body-5 input::-moz-placeholder {
+    .regist input::-moz-placeholder {
         color: #fff;
     }
 
-    .body-5 input:-ms-input-placeholder {
+    .regist input:-ms-input-placeholder {
         color: #fff;
     }
 
-.body-5 .btn {
+.regist .btn {
     display: block;
     width: 60%;
     height: 40px;
@@ -266,17 +288,17 @@ li {
     font-size: 17px;
 }
 
-.body-5 .title {
+.regist .title {
     color: #FDEEE7;
     padding: 20px 0 0 10px;
 }
 
-    .body-5 .title > div {
+    .regist .title > div {
         padding: 10px 0 10px 0;
     }
 
 /*兴甫风采版块*/
-.body-6 .block {
+.xingfufengcai .block {
     width: 90%;
     margin: 0 auto 5px auto;
     padding: 5px;
@@ -285,17 +307,17 @@ li {
     margin-bottom: 8px;
 }
 
-    .body-6 .block img {
+    .xingfufengcai .block img {
         width: 100%;
     }
 
-.body-6 .title {
+.xingfufengcai .title {
     padding: 5px 0;
     font-size: 14px;
     color: #FB9758;
 }
 
-.body-6 .floatright {
+.xingfufengcai .floatright {
     padding-right: 10%;
     font-weight: bold;
 }

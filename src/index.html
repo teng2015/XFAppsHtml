@@ -7,19 +7,21 @@
     <title>主页</title>
     <link href="css/main.css" rel="stylesheet" />
 </head>
-<body>
+<body ng-app="xfapp">
     <div class="header">
-        <span style="width: 17%;"></span>
-        <span style="width: 60%;">欢迎访问贵阳兴甫武校</span>
-        <span class="glyphicon glyphicon-menu-hamburger" style="width: 10%; font-size: 15px;"></span>
+        <span class="title">
+            欢迎访问贵阳兴甫武校
+            <span class="glyphicon glyphicon-menu-hamburger"></span>
+        </span>
         <ul class="menu">
-            <li><a href="index.html">主页</a></li>
-            <li><a href="news.html">新闻资讯</a></li>
-            <li><a href="teachers.html">教练风采</a></li>
-            <li><a href="xingfufengcai.html">兴甫风采</a></li>
-            <li><a href="regist.html">在线报名</a></li>
+            <li><a ui-sref="main">主页</a></li>
+            <li><a ui-sref="news">新闻资讯</a></li>
+            <li><a ui-sref="teachers">教练风采</a></li>
+            <li><a ui-sref="xingfufengcai">兴甫风采</a></li>
+            <li><a ui-sref="regist">在线报名</a></li>
         </ul>
     </div>
+    <div class="header2"></div>
     <div class="banner">
         <div class="flex">
             <ul class="slides">
@@ -42,18 +44,9 @@
             </ul>
         </div>
     </div>
-    <div class="body-1">
-        <a class="block" href="#" style="background: url(img/1.png);"><span>星甫幼儿园</span></a>
-        <a class="block-2"></a>
-        <a class="block" href="#" style="background: url(img/1.png);"><span>名教风采</span></a>
-        <a class="block-2"></a>
-        <a class="block" href="#" style="background: url(img/1.png);"></a>
-    </div>
-    <div class="body-2">
-        <a class="block" href="#" style="background: url(img/1.png); width: 66%;"></a>
-        <a class="block" href="#" style="width: 2%;"></a>
-        <a class="block" href="#" style="background: url(img/1.png); width: 32%;"></a>
-    </div>
+    
+    <div ui-view></div>
+    
     <div class="footer2"></div>
     <div class="footer">
         <a href="#" style="background-color: #FFAD01;">
@@ -68,7 +61,7 @@
     <script src="js/jquery-2.1.1.min.js"></script>
     <script type="text/javascript" src="js/jflex.min.js"></script>
     <script type="text/javascript">
-        $(document).ready(function () {
+        jQuery(document).ready(function () {
             //轮播图初始化
             $('.flex').jFlex({
                 titles: 'bottom'
@@ -77,7 +70,25 @@
             $('.glyphicon-menu-hamburger').click(function () {
                 $('.header').find('.menu').slideToggle();
             });
+            $('.header').find('.menu').find("a").click(function () {
+                $('.header').find('.menu').slideToggle();
+            });
+            //滚动条监听，设置页头样式
+            //$(window).scroll(function () {
+            //    if ($(this).scrollTop() <= 0) {
+            //        $('.header').removeClass("header-fixed");
+            //        $('.header2').hide();
+            //    }
+            //    else {
+            //        $('.header').addClass("header-fixed");
+            //        $('.header2').show();
+            //    }
+            //});
         });
     </script>
+    <script src="/bower_components/angular/angular.min.js"></script>
+    <script src="/bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/controller.js"></script>
 </body>
 </html>
