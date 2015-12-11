@@ -15,8 +15,8 @@
         </span>
         <ul class="menu">
             <li><a ui-sref="main">主页</a></li>
-            <li><a ui-sref="news">新闻资讯</a></li>
-            <li><a ui-sref="teachers">教练风采</a></li>
+            <li><a ui-sref="news">新闻动态</a></li>
+            <li><a ui-sref="teachers">名教风采</a></li>
             <li><a ui-sref="xingfufengcai">兴甫风采</a></li>
             <li><a ui-sref="regist">在线报名</a></li>
         </ul>
@@ -26,19 +26,19 @@
         <div class="flex">
             <ul class="slides">
                 <li>
-                    <img src="img/2.jpg" />
+                    <img src="img/b2.jpg" />
                     <span class="title">游亚洲第一的新加坡动物园</span>
                 </li>
                 <li>
-                    <img src="img/2.jpg" />
+                    <img src="img/b1.jpg" />
                     <span class="title">游亚洲第一的新加坡动物园</span>
                 </li>
                 <li>
-                    <img src="img/2.jpg" />
+                    <img src="img/b2.jpg" />
                     <span class="title">游亚洲第一的新加坡动物园</span>
                 </li>
                 <li>
-                    <img src="img/2.jpg" />
+                    <img src="img/b1.jpg" />
                     <span class="title">游亚洲第一的新加坡动物园</span>
                 </li>
             </ul>
@@ -73,17 +73,6 @@
             $('.header').find('.menu').find("a").click(function () {
                 $('.header').find('.menu').slideToggle();
             });
-            //滚动条监听，设置页头样式
-            //$(window).scroll(function () {
-            //    if ($(this).scrollTop() <= 0) {
-            //        $('.header').removeClass("header-fixed");
-            //        $('.header2').hide();
-            //    }
-            //    else {
-            //        $('.header').addClass("header-fixed");
-            //        $('.header2').show();
-            //    }
-            //});
         });
     </script>
     <script src="/bower_components/angular/angular.min.js"></script>
