@@ -1,0 +1,10 @@
+{
+  "name": "XFAppsHtml",
+  "version": "1.0.0",
+  "description": "XFAppsHtml",
+  "license": "MIT",
+  "dependencies": {
+    "angular": "~1.4.7",
+    "angular-ui-router": "~0.2.15"
+  }
+}

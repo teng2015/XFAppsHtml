@@ -1,9 +1,19 @@
+// 
+// 依赖引入
+// 
 var gulp = require('gulp'),
+    browserSync = require('browser-sync').create(),
   	rev = require('gulp-rev'),
   	revCollector = require('gulp-rev-collector'),
   	runSequence = require('run-sequence'),
   	clean = require('gulp-clean'),
   	rimraf = require('rimraf');
+      
+var watch = require('gulp-watch');
+
+// 
+// 项目文件信息变量配置
+// 
 
 var src = 'src',
 	dist = 'dist',
@@ -25,6 +35,10 @@ var htmlSrc = src + '/*.html',
 	htmlDist = dist,
 	htmlRev = revp + '/html',
 	htmlDistSrc = dist + '/*.html';
+
+// 
+// release
+// 
 
 // js 生成版本号
 gulp.task('revJs', function(){
@@ -102,8 +116,8 @@ gulp.task('deleteRev', function (cb) {
 	rimraf(revp, cb);
 });
 
-//正式构建
-gulp.task('build', function (done) {
+// release任务
+gulp.task('release', function (done) {
     runSequence(
     	['deleteDist', 'deleteRev'],
     	// ['cleanDist', 'cleanRev'],
@@ -112,4 +126,23 @@ gulp.task('build', function (done) {
     done);
 });
 
-gulp.task('default', ['build']);
+
+
+// 
+// debug
+// 
+
+gulp.task('default', ['debug']);
+
+gulp.task('debug', function () {
+    
+    watch([jsSrc, cssSrc, imgSrc, htmlSrc], browserSync.reload);
+    
+    browserSync.init({
+        server: {
+            baseDir: "./"
+        },
+        port: 8080,
+        startPath: src
+    });
+});
