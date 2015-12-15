@@ -7,6 +7,7 @@
     <title>主页</title>
     <link href="css/main.css" rel="stylesheet" />
     <link href="css/animate.css" rel="stylesheet" />
+    <link href="/bower_components/Swiper/dist/css/swiper.min.css" rel="stylesheet" />
 </head>
 <body ng-app="xfapp">
     <div class="header">
@@ -22,34 +23,33 @@
         </ul>
     </div>
     <div class="header2"></div>
-    <div class="banner">
-        <div class="flex">
-            <ul class="slides">
-                <li>
-                    <img src="img/b2.jpg" />
-                    <span class="title">游亚洲第一的新加坡动物园</span>
-                </li>
-                <li>
-                    <img src="img/b1.jpg" />
-                    <span class="title">游亚洲第一的新加坡动物园</span>
-                </li>
-                <li>
-                    <img src="img/b2.jpg" />
-                    <span class="title">游亚洲第一的新加坡动物园</span>
-                </li>
-                <li>
-                    <img src="img/b1.jpg" />
-                    <span class="title">游亚洲第一的新加坡动物园</span>
-                </li>
-            </ul>
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <img class="bg" src="img/b2.jpg" />
+                <span class="title">游亚洲第一的新加坡动物园</span>
+            </div>
+            <div class="swiper-slide">
+                <img class="bg" src="img/b1.jpg" />
+                <span class="title">游亚洲第一的新加坡动物园</span>
+            </div>
+            <div class="swiper-slide">
+                <img class="bg" src="img/b2.jpg" />
+                <span class="title">游亚洲第一的新加坡动物园</span>
+            </div>
+            <div class="swiper-slide">
+                <img class="bg" src="img/b1.jpg" />
+                <span class="title">游亚洲第一的新加坡动物园</span>
+            </div>
         </div>
+        <div class="swiper-pagination"></div>
     </div>
 
     <div ui-view></div>
 
     <div class="footer2"></div>
     <div class="footer">
-        <a href="javascript:;" style="background-color: #FFAD01;">
+        <a ui-sref="regist" style="background-color: #FFAD01;">
             <span class="glyphicon glyphicon-comment"></span>
             <span>立即报名</span>
         </a>
@@ -65,26 +65,33 @@
     <script src="js/controller.js"></script>
 
     <script src="js/jquery-2.1.1.min.js"></script>
-    <script type="text/javascript" src="js/jflex.min.js"></script>
+    <script src="/bower_components/Swiper/dist/js/swiper.jquery.min.js"></script>
     <script type="text/javascript">
         jQuery(document).ready(function () {
-            //轮播图初始化
-            $('.flex').jFlex({
-                titles: 'bottom'
-            });
+            ////轮播图初始化
+            var mySwiper = new Swiper('.swiper-container', {
+                loop: true,
+                pagination: '.swiper-pagination',
+                paginationClickable: true
+            })
             //菜单初始化
             var menu = $('.header').find('.menu');
             $('.glyphicon-menu-hamburger').click(function () {
-                $(menu).toggle();
+                //$(menu).toggle();
                 if ($(menu).hasClass("fadeInDown")) {
                     $(menu).removeClass("fadeInDown").addClass("fadeOutUp");
                 }
                 else {
-                    $(menu).removeClass("fadeOutUp").addClass("fadeInDown");
+                    $(menu).removeClass("fadeOutUp").addClass("fadeInDown").show();
                 }
             });
             $('.header').find('.menu').find("a").click(function () {
-                $(menu).removeClass("fadeInDown").toggle();
+                if ($(menu).hasClass("fadeInDown")) {
+                    $(menu).removeClass("fadeInDown").addClass("fadeOutUp");
+                }
+                else {
+                    $(menu).removeClass("fadeOutUp").addClass("fadeInDown").show();
+                }
             });
         });
     </script>

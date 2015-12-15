@@ -4,7 +4,7 @@
     font-family: SimHei;
     margin: 0 auto;
     padding: 0;
-    max-width: 900px;
+    max-width: 450px;
 }
 
 a {
@@ -35,11 +35,12 @@ li {
 
 .header, .header2 {
     height: 50px;
-    background-color: #2D2C2D;
-    color: #fff;
-    line-height: 50px;
     width: 100%;
+    line-height: 50px;    
+    color: #fff;
     font-size: 20px;
+    background-color: #2D2C2D;
+    max-width: 450px;
 }
 
     .header .title {
@@ -51,18 +52,16 @@ li {
             font-size: 15px;
             padding: 12px;
             height: 100%;
+            z-index: 2000;
         }
 
     .header .menu {
-        /*position: relative;
-        top: 0px;
-        z-index: 1000;*/
         width: 100%;
-        background-color: #000;
-        filter: alpha(opacity=80);
-        -moz-opacity: 0.8;
-        -khtml-opacity: 0.8;
-        opacity: 0.8;
+        background-color: #2D2C2D;
+        filter: alpha(opacity=80) !important;
+        -moz-opacity: 0.8 !important;
+        -khtml-opacity: 0.8 !important;
+        opacity: 0.8 !important;
         display: none;
     }
 
@@ -70,55 +69,46 @@ li {
             padding: 0 20px;
             display: block;
             color: #fff;
-            border-bottom: 2px solid #777;
+            border-top: 2px solid #777;
             text-align: center;
         }
 
 
 
 /*轮播图版块*/
-.banner {
-    margin-bottom: 6px;
+.swiper-container {
+    background: #fff;
+    width: 100%;
+    height: 270px;
+    margin-bottom: 7px !important;
 }
 
-    .banner .slides--titles {
-        position: absolute;
-        margin-right: 10%;
-        bottom: 13px;
-        right: 0px;
+.swiper-slide .bg {
+    width: 100%;
+    height: 100%;
+}
+
+.swiper-slide .title {
+    display: block;
+    padding: 9px;
+    color: #fff;
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+    background-color: #000;
+    filter: alpha(opacity=80);
+    -moz-opacity: 0.8;
+    -khtml-opacity: 0.8;
+    opacity: 0.8;
+}
+
+.swiper-pagination {
+    text-align: right !important;
+}
+
+    .swiper-pagination .swiper-pagination-bullet {
+        background: #fff;
     }
-
-        .banner .slides--titles li {
-            width: 10px;
-            height: 10px;
-            border-radius: 10px;
-            margin-right: 3px;
-        }
-
-            .banner .slides--titles li .title--l {
-                height: 100%;
-                border-radius: 10px;
-            }
-
-    .banner .slides .title {
-        display: block;
-        padding: 9px;
-        color: #fff;
-        position: absolute;
-        bottom: 0px;
-        width: 100%;
-        background-color: #000;
-        filter: alpha(opacity=80);
-        -moz-opacity: 0.8;
-        -khtml-opacity: 0.8;
-        opacity: 0.8;
-    }
-
-    .banner .slides img {
-        width: 100%;
-    }
-
-
 
 /* 主页版块1 */
 .main {
@@ -422,7 +412,7 @@ li {
     display: block;
     width: 60%;
     height: 40px;
-    border-radius: 10px;
+    border-radius: 5px;
     padding: 6px 0;
     margin: 20px auto;
     text-align: center;
@@ -436,6 +426,7 @@ li {
 .regist .title {
     color: #FDEEE7;
     padding: 20px 0 0 10px;
+    font-size: 1.2em;
 }
 
     .regist .title > div {
@@ -515,7 +506,7 @@ li {
     bottom: 0;
     height: 40px;
     margin: 0 auto;
-    max-width: 900px;
+    max-width: 450px;
     width: 100%;
 }
 
@@ -569,155 +560,4 @@ li {
 
 .glyphicon-menu-hamburger:before {
     content: "\e236";
-}
-
-.jFlex {
-    overflow: hidden;
-    position: relative;
-    -webkit-touch-callout: none;
-    -webkit-user-select: none;
-    -khtml-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-}
-
-.slides {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    position: relative;
-}
-
-.slides--anim {
-    -moz-transition: transform ease-out .3s;
-    -ms-transition: transform ease-out .3s;
-    -o-transition: transform ease-out .3s;
-    -webkit-transition: transform ease-out .3s;
-    transition: transform ease-out .3s;
-}
-
-.slides--titles {
-    margin: 0;
-    padding: 0;
-}
-
-    .slides:before,
-    .slides--titles:before,
-    .slides:after,
-    .slides--titles:after {
-        content: ' ';
-        display: table;
-    }
-
-    .slides:after,
-    .slides--titles:after {
-        clear: both;
-    }
-
-.slides li {
-    display: block;
-    float: left;
-    overflow: hidden;
-    position: relative;
-}
-
-.slides img {
-    display: block;
-    height: auto;
-    max-width: 100%;
-}
-
-.slides--titles li {
-    background: #eee;
-    cursor: pointer;
-    float: left;
-    overflow: hidden;
-    position: relative;
-    text-align: center;
-    -moz-transition: background linear .3s;
-    -ms-transition: background linear .3s;
-    -o-transition: background linear .3s;
-    -webkit-transition: background linear .3s;
-    transition: background linear .3s;
-    width: 33.33333%;
-}
-
-.jflex--2 li {
-    width: 50%;
-}
-
-.jflex--3 li {
-    width: 33.3333333%;
-}
-
-.jflex--4 li {
-    width: 25%;
-}
-
-.jflex--5 li {
-    width: 20%;
-}
-
-.jflex--6 li {
-    width: 16.6666667%;
-}
-
-.slides--titles li .title--l {
-    background: #555;
-    display: block;
-    height: 4px;
-    left: -100%;
-    position: relative;
-}
-
-.slides--titles li .title--t {
-    color: #333;
-    display: block;
-    height: 50px;
-    line-height: 50px;
-    padding: 0 10px;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-}
-
-.slides--titles li.title--manual .title--l {
-    -moz-transition: all linear .3s;
-    -ms-transition: all linear .3s;
-    -o-transition: all linear .3s;
-    -webkit-transition: all linear .3s;
-    transition: all linear .3s;
-}
-
-.slides--titles li.title--auto .title--l {
-    -moz-transition: all linear .3s;
-    -ms-transition: all linear .3s;
-    -o-transition: all linear .3s;
-    -webkit-transition: all linear .3s;
-    transition: all linear .3s;
-}
-
-.slides--titles li.title--auto.title--active .title--l {
-    -moz-transition: all linear 5s;
-    -ms-transition: all linear 5s;
-    -o-transition: all linear 5s;
-    -webkit-transition: all linear 5s;
-    transition: all linear 5s;
-}
-
-.slides--titles li.title--active .title--l {
-    left: 0;
-}
-
-.slides--titles li.title--right .title--l {
-    left: 100%;
-}
-
-.slides--titles li.title--active .title--t {
-    font-weight: bold;
-}
-
-.slides--titles li.title--active {
-    background: #ddd;
 }
