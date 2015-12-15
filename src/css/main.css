@@ -124,7 +124,7 @@ li {
         float: left;
     }
 
-        .main .block > span {
+        .main .block .title {
             position: absolute;
             bottom: 0;
             text-align: center;
@@ -177,7 +177,7 @@ li {
     }
 
     .main-2 .btngp {
-        margin: 30px 0 0 0;
+        margin: 30% 0 0 0;
     }
 
         .main-2 .btngp img {
