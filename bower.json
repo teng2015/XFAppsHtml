@@ -5,6 +5,7 @@
   "license": "MIT",
   "dependencies": {
     "angular": "~1.4.7",
-    "angular-ui-router": "~0.2.15"
+    "angular-ui-router": "~0.2.15",
+	"Swiper": "~3.2.7"
   }
 }
